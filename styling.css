@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* navbar */
+
+.navbar-brand {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.navbar {
+  background-color: #394b64;
+  color: white;
+}
+
+ul:hover {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+.nav-item {
+  font-size: 1.5rem;
+}
+.nav-item:hover {
+  border: 1px solid white;
+  border-radius: 100px;
+  color: yellow;
+}
+a:hover {
+  color: white;
+}
+
+/* mediaQueries for navbar*/
+@media screen and (max-width: 1000px) {
+  label.logo {
+    font-size: 32px;
+    padding-left: 60px;
+  }
+  nav ul {
+    margin-right: 20px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav #icon {
+    display: block;
+    margin-left: 10px;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2f3640;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    transition: all 0.5s;
+    display: block;
+  }
+  nav li {
+    display: block;
+    margin: 50px;
+    line-height: 30px;
+  }
+  nav a {
+    font-size: 20px;
+  }
+}
+
+#landing {
+  background-image: url(./pictures/property.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#landing h1,
+h3 {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  padding: 10px;
+  font-family: "Stick No Bills", sans-serif;
+  font-weight: 200;
+}
+
+#landing {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  padding: 10px;
+}
+
+#landing,
+a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.search {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: transparent;
+  bottom: -180px;
+  padding: 20px 20px;
+  box-shadow: 2px 2px 2px 5px rgb(250, 249, 249);
+  font-size: 20px;
+  width: auto;
+  margin: 10px;
+  height: auto;
+}
+select {
+  margin: 5px;
+  float: left;
+  padding: 5px;
+}
+input {
+  float: right;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#addProperty{
+  margin-top: 5px;
+  width: 25%;
+  padding: 1px;
+  border-radius: 50px;
+  margin-inline: auto;
+}
+#addProperty:hover{
+  color: green;
+  border: 1px solid green;
+  border-radius: 100px;
+}
+#removeAddedProperty{
+  margin-top: 5px;
+  width: 25%;
+  padding: 1px;
+  border-radius: 50px;
+  margin-inline: auto;
+}
+#removeAddedProperty:hover{
+  color: red;
+  border: 1px solid red;
+  border-radius: 100px;
+
+}
+.buttons{
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#discover {
+  min-height: 100vh;
+  background-color: rgb(200, 197, 197);
+  text-align: center;
+}
+
+#properties .card {
+  padding: 10px;
+  margin: 2px;
+  box-shadow: 0.5px 0.5px 0.6px 0.12px rgb(0, 0, 0);
+  min-width: 20vw;
+  overflow: hidden;
+
+}
+
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  border: 1px solid #f1f1f1; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front {
+  background-color: rgb(58, 96, 126);
+  color: black;
+  
+}
+
+.card-text{
+  text-align: left;
+  color: white;
+}
+
+@media screen and (max-width: 1400px) {
+  .search{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #landing h1, h3{
+    font-size: 40px;
+  }
+}
+
+/* .flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+} */
+
+
+/* .flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
