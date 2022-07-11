@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto:wght@100&family=Stick+No+Bills:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titleHeading{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#propertiesModal{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#listTheProperty{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#listTheProperty input{
+    width: 100%;
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+form input{
+    padding: 10px;
+    border-radius: 100px;
+    width: 50%;
+}
+form #searchProperty{
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#property table{
+    padding:5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+tr, th{
+    border: 1px solid black;
+    padding: 20px;
+    width: 100vw;
+}
+
+td{
+    border: 1px solid black;
+    padding: 20px;
+    width: 100vw;
+}
+

@@ -52,95 +52,8 @@ function searchFilter(){
 
 }
 
-// STEP 2: DISPLAY PROPERTIES IN HTML
-
-function listProperty(){
-
-    //create variable that will display
-    const property = document.getElementById('discover');
-    //include it in storage
-    const properties = JSON.parse(localStorage.getItem('records') || '[]')
-    console.table(properties);
-
-    //display properties in HTML
-    property.innerHTML = '';
-    
-    //Loop the properties record
-    propertyList.forEach(e =>{
-        property.innerHTML += ` <div class="card" style="width: 100%;">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h6 class="title">${propertyList.name}</h6>
-                            <img src="${propertyList.image}"  alt="Solo House Container">
-                            <div class="card-body">
-                                <p class="card-text">${propertyList.description}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="back-card-text">${propertyList.amenities}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-    });
-    console.table(properties);
-} 
-//Display properties
-listProperty();
 
 
-//STEP 3: ADD PROPERTIES INTO LIST CREATED
-
-function addNewProperty(){
-
-    //get button value
-    const newProperty = document.querySelector('#addNewProperty').value;
-
-    propertyList.forEach((newListing) =>{
-         property.innerHTML += ` <div class="card" style="width: 100%;">
-                     <div class="flip-card">
-                         <div class="flip-card-inner">
-                             <div class="flip-card-front">
-                                 <h6 class="title">${propertyList.name}</h6>
-                                 <img src="${propertyList.image}"  alt="Solo House Container">
-                                 <div class="card-body">
-                                     <p class="card-text">${propertyList.description}
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="flip-card-back">
-                                 <p class="back-card-text">${propertyList.amenities}
-                                 </p>
-                             </div>
-                         </div>
-                     </div>
-             </div>`;
-    })
-}
-
-
-//STEP 4: DELETE PROPERTY
-
-function removeAddedProperty(){
-    if(id > 1){
-        propertyList.splice(id, 1);
-        localStorage.setItem('records', JSON.stringify(propertyList))
-    }
-}
-
-//OR 
-
-function removeAddedProperty(){
-
-    const index = propertyList.findIndex(id => propertyList.id == id);
-    const deleteProp = doxument.getElemntById('removeAddedProperty').value;
-
-    console.log(index);
-    removeAddedProperty(index);
-}
 
 //STEP 5: SORT PROPERTIES
 
@@ -162,7 +75,3 @@ function sortProperties(){
 
 }
 
-//BUTTONS FOR FUNCTIONALITY
-
-const addNewProperty = document.querySelector('#addNewProperty').addEventListener('click', addNewProperty);
-const deletePropertyListed = document.querySelector('#removeAddedProperty').addEventListener('click', removeAddedProperty);
